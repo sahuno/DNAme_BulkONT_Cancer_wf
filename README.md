@@ -8,11 +8,13 @@
 
 
 # snakefiles
-minimal haplotype resolved somatic DNAme + germline DNAme (input:pod5 per file output:phased .modbam)
-minimal workflow for modified basecalling
+1. minimal haplotype resolved somatic DNAme + germline DNAme (input:pod5 per file output:phased .modbam)
+2. minimal workflow for functional analysis + visualization (modkit dmr reegions, tumor/Normal, bedgrapgs for visualization, read-level methylatyion, stattics of genomewide methylation)
+3. minimal workflow for modified basecalling (optional)
+
 
 future
--optimized basecalling 
+-batched modified basecalling per sample (for optimized basecalling)
 
 
 ```
