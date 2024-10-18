@@ -1,0 +1,29 @@
+#cluster_slurm.yaml  fastq_to_bam_paired.snakefile
+#samuel ahunos
+#Template made October 18th, 2019
+#Ha Lab: Fred Hutchinson Cancer Research Center
+
+__default__:  # Settings that apply to all jobs unless overridden
+  mem: "100G"
+  time: "1-00:00:00"  # Days-Hours:Minutes:Seconds
+  partition: "componc_gpu" 
+  tasks: 24
+  nodes: 1
+#   jobName: {rule}
+#   output: logs/cluster/{rule}.%J.out
+#   errorFile: logs/cluster/{rule}.%J.err
+# __default__:
+#     partition: componc_cpu #bsub is default
+#     runtime: 1:00
+#     nodes: 1
+#     mem: 2G
+#     tasks: 16
+    # jobName: {rule}
+    # output: logs/cluster/{rule}.%J.out
+    # errorFile: logs/cluster/{rule}.%J.err
+
+# nameOfRule:
+#     time: "48:0:0"
+#     mem: 12G
+#     ncpus: 4
+

@@ -1,0 +1,45 @@
+#samuel ahuno 
+#merge multiple chrom files for each sample
+#
+
+#######################################
+#Step 1: create multiple files to merge
+######################################
+
+import subprocess # run shell script in python
+subprocess.run((['mkdir','-p', 'dirToFiles']))
+
+SAMPLES = ["sample1", "sample2", "sample3", "sample4"] #create fake sample and chromomosme names
+CHROMS=["1", "X", "M"]
+
+for sample in SAMPLES:
+    for chrom in CHROMS:
+        subprocess.run((['touch', f'dirToFiles/{sample}_chr_{chrom}_data.txt']))
+        # subprocess.run((['echo', '"',str(sample),'"', '>>', f'dirToFiles/{sample}_chr_{chrom}_result.txt'])) #this doesn't work,
+
+#write some  contents to the files
+for sample in SAMPLES:
+    for chrom in CHROMS:
+        f = open(f'dirToFiles/{sample}_chr_{chrom}_data.txt', "w")
+        f.write(f'dirToFiles/{sample}_chr_{chrom}_data.txt')
+        f.close()
+
+
+#################################
+#Step 2: snakemake rules
+#################################
+SAMPLES = ["sample1", "sample2", "sample3", "sample4"]
+CHROMS = ["1", "X", "M"]
+
+rule all:
+    input: expand("result/{sample}_merged_chr1XM.txt",sample=SAMPLES)
+#expand("dirToFiles/{sample}_chr_{chrom}_data.txt",sample=SAMPLES, chrom=CHROMS),
+
+rule combineFiles:
+    input:
+        expand("dirToFiles/{sample}_chr_{chrom}_data.txt", chrom=CHROMS, allow_missing=True)
+    output:
+        "result/{sample}_merged_chr1XM.txt"
+    log: 
+        "logs/{sample}_merged_chr1XM.txt"
+    shell: "cat {input} > {output} &> {log}"

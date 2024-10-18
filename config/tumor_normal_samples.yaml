@@ -1,0 +1,2 @@
+samples:
+    patientID_Tumor: [/path/to/tumorSite1.pod5, name_of_normal, /path/to/NormalSite1.pod5]

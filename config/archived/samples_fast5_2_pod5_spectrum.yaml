@@ -1,0 +1,24 @@
+samples:
+    044T_v14: /home/ahunos/apps/sandbox/044T_v14/
+    # 044T_v14: /data1/shahs3/isabl_raw_data/ont/spectrum/Project_13135_K/220816_Spectrum_R10FC_5T/fast5_pass
+    # D-0-1: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-0-1
+    # D-0-2: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-0-2
+    # D-0-3: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-0-3
+    # D-A-1: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-A-1
+    # D-A-2: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-A-2
+    # D-A-3: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-A-3
+    # D-C-1: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-C-1
+    # D-C-2: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-C-2
+    # D-C-3: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-C-3
+    # D-Q-1: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-Q-1
+    # D-Q-2: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-Q-2
+    # D-Q-3: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-Q-3
+    # D-QC-1: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-QC-1
+    # D-QC-2: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-QC-2
+    # D-QC-3: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-QC-3
+    # D-S-1: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-S-1
+    # D-S-2: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-S-2
+    # D-S-3: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-S-3
+    # D-SC-1: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-SC-1
+    # D-SC-2: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-SC-2
+    # D-SC-3: /work/greenbaum/projects/ont_pipeline/projects/TRI_EPIGENETIC/organized/FAST5/D-SC-3

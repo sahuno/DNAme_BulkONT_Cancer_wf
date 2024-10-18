@@ -1,0 +1,15 @@
+samples:
+    # 044T_v14: /data1/greenbab/projects/methyl_benchmark_spectrum/data/raw/fast5/004T_v14/fast5_pass/
+    # 044N_v14: /data1/shahs3/isabl_raw_data/ont/spectrum/Project_13135_K/220816_Spectrum_R10FC_5N/fast5_pass/
+    009T1: /data1/shahs3/isabl_raw_data/ont/spectrum/Project_09443_DP/fast5/SPECTRUM_III_050322/7T/20220503_1355_3C_PAK10282_c4b8af82/fast5_pass/
+    # 009T2: /data1/shahs3/isabl_raw_data/ont/spectrum/Project_09443_DP/fast5/SPECTRUM_III_050322/7T2/20220503_1355_3H_PAK29638_476ae9da/fast5_pass/
+    # 044N_notV14: /data1/shahs3/isabl_raw_data/ont/spectrum/Project_09443_DP/fast5/220517_SPECTRUM_run_III_normals/5N/20220517_1611_2H_PAM61761_3b48fa08/fast5_pass/
+    # 044T_1_notV14: /data1/shahs3/isabl_raw_data/ont/spectrum/Project_09443_DP/fast5/SPECTRUM_III_050322/5T/20220503_1422_1C_PAK09666_461e70eb/fast5_pass/
+    # 044T_2_notV14: /data1/shahs3/isabl_raw_data/ont/spectrum/Project_09443_DP/fast5/SPECTRUM_III_050322/5T2/20220503_1355_2A_PAK12566_4b970665/fast5_pass/
+    # 044T_3_notV14: /data1/shahs3/isabl_raw_data/ont/spectrum/Project_09443_DP/fast5/SPECTRUM_III_050322/5T2-2/20220505_1328_2B_PAK12566_cddc524b/fast5_pass/
+
+
+
+
+    # 044T_v14: /data1/shahs3/isabl_raw_data/ont/spectrum/Project_13135_K/220816_Spectrum_R10FC_5T/fast5_pass
+    #l /data1/shahs3/isabl_raw_data/ont/spectrum/Project_13135_K/220816_Spectrum_R10FC_5T/fast5_pass/PAM06744_pass_1ae08469_[1-10].fast5

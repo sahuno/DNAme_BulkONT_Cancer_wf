@@ -1,0 +1,17 @@
+samples:
+    D-0-1: /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/TRI_EPIGENETIC/results/methylation/markdups/D-0-1/D-0-1_mod_markdup_sorted.bam
+    D-0-2: /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/TRI_EPIGENETIC/results/methylation/markdups/D-0-2/D-0-2_mod_markdup_sorted.bam
+    D-0-3: /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/TRI_EPIGENETIC/results/methylation/markdups/D-0-3/D-0-3_mod_markdup_sorted.bam
+    D-A-1: /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/TRI_EPIGENETIC/results/methylation/markdups/D-A-1/D-A-1_mod_markdup_sorted.bam
+    D-A-2: /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/TRI_EPIGENETIC/results/methylation/markdups/D-A-2/D-A-2_mod_markdup_sorted.bam
+    D-A-3: /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/TRI_EPIGENETIC/results/methylation/markdups/D-A-3/D-A-3_mod_markdup_sorted.bam
+    D-C-1: /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/TRI_EPIGENETIC/results/methylation/markdups/D-C-1/D-C-1_mod_markdup_sorted.bam
+    D-C-2: /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/TRI_EPIGENETIC/results/methylation/markdups/D-C-2/D-C-2_mod_markdup_sorted.bam
+    D-C-3: /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/TRI_EPIGENETIC/results/methylation/markdups/D-C-3/D-C-3_mod_markdup_sorted.bam
+    D-Q-2: /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/TRI_EPIGENETIC/results/methylation/markdups/D-Q-2/D-Q-2_mod_markdup_sorted.bam
+    D-Q-3: /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/TRI_EPIGENETIC/results/methylation/markdups/D-Q-3/D-Q-3_mod_markdup_sorted.bam
+    D-QC-1: /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/TRI_EPIGENETIC/results/methylation/markdups/D-QC-1/D-QC-1_mod_markdup_sorted.bam
+    D-QC-3: /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/TRI_EPIGENETIC/results/methylation/markdups/D-QC-3/D-QC-3_mod_markdup_sorted.bam
+    D-S-2: /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/TRI_EPIGENETIC/results/methylation/markdups/D-S-2/D-S-2_mod_markdup_sorted.bam
+    D-S-3: /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/TRI_EPIGENETIC/results/methylation/markdups/D-S-3/D-S-3_mod_markdup_sorted.bam
+    D-SC-1: /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/TRI_EPIGENETIC/results/methylation/markdups/D-SC-1/D-SC-1_mod_markdup_sorted.bam

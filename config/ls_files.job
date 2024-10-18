@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#SBATCH --job-name=testfile
+#SBATCH --partition=componc_cpu
+#SBATCH --gres=gpu:1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=1G           
+#SBATCH --time=0:10:00       
+#SBATCH --error=%J_%I.err
+#SBATCH --output=%J_%I.out 
+#SBATCH --mail-user=ekwame001@gmail.com
+#SBATCH --mail-type=ALL
+
+###SBATCH --mail-user=$USER@mskcc.org
+## SLURM directives
+# conda activate /home/ahunos/miniforge3/envs/methyl_ONT
+ls -tal /data1/shahs3/isabl_raw_data/ont/spectrum/Project_13135_K/220816_Spectrum_R10FC_5T/fast5_pass/ | head
+# echo "l /data1/shahs3/isabl_raw_data/ont/spectrum/Project_13135_K/220816_Spectrum_R10FC_5T/fast5_pass/"
+# sbatch /home/ahunos/apps/dorado_ont_wf/config/ls_files.job

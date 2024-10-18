@@ -1,0 +1,6 @@
+samples:
+    009N_1: /data1/greenbab/projects/methyl_benchmark_spectrum/data/preprocessed/009N_rerun/results/pod5/009N_1/009N_1.pod5
+    009N_2: /data1/greenbab/projects/methyl_benchmark_spectrum/data/preprocessed/009N_rerun/results/pod5/009N_2/009N_2.pod5
+    # 009N_1: /data1/shahs3/isabl_raw_data/ont/spectrum/Project_09443_DP/fast5/SPECTRUM_III_050322/7N/20220503_1422_1F_PAM57680_98cdf0ea/fast5_pass/
+    # 009N_2: /data1/shahs3/isabl_raw_data/ont/spectrum/Project_09443_DP/fast5/SPECTRUM_III_050322/7N-2/20220505_1405_1E_PAM57680_372e3d9e/fast5_pass/
+    # 044T_v14_test2: /home/ahunos/apps/sandbox/044T_v14

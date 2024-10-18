@@ -1,0 +1,642 @@
+{
+    "total_runtime": 12295.818782567978,
+    "rules": {
+        "pod5": {
+            "mean-runtime": 8110.697930290586,
+            "min-runtime": 3790.3418486118317,
+            "max-runtime": 12293.63310098648
+        }
+    },
+    "files": {
+        "results/pod5/D-SC-1/D-SC-1.pod5": {
+            "start-time": "Sat Sep 16 06:35:36 2023",
+            "stop-time": "Sat Sep 16 09:10:09 2023",
+            "duration": 9272.513092041016,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-SC-1/D-SC-1_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:36 2023",
+            "stop-time": "Sat Sep 16 09:10:09 2023",
+            "duration": 9272.513092041016,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-C-2/D-C-2.pod5": {
+            "start-time": "Sat Sep 16 06:35:36 2023",
+            "stop-time": "Sat Sep 16 08:19:15 2023",
+            "duration": 6218.317441940308,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-C-2/D-C-2_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:36 2023",
+            "stop-time": "Sat Sep 16 08:19:15 2023",
+            "duration": 6218.317441940308,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-A-1/D-A-1.pod5": {
+            "start-time": "Sat Sep 16 06:35:37 2023",
+            "stop-time": "Sat Sep 16 08:44:35 2023",
+            "duration": 7738.040041685104,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-A-1/D-A-1_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:37 2023",
+            "stop-time": "Sat Sep 16 08:44:35 2023",
+            "duration": 7738.040041685104,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-SC-2/D-SC-2.pod5": {
+            "start-time": "Sat Sep 16 06:35:37 2023",
+            "stop-time": "Sat Sep 16 09:05:08 2023",
+            "duration": 8971.168930530548,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-SC-2/D-SC-2_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:37 2023",
+            "stop-time": "Sat Sep 16 09:05:08 2023",
+            "duration": 8971.168930530548,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-Q-1/D-Q-1.pod5": {
+            "start-time": "Sat Sep 16 06:35:38 2023",
+            "stop-time": "Sat Sep 16 08:03:50 2023",
+            "duration": 5291.950629234314,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-Q-1/D-Q-1_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:38 2023",
+            "stop-time": "Sat Sep 16 08:03:50 2023",
+            "duration": 5291.950629234314,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-QC-2/D-QC-2.pod5": {
+            "start-time": "Sat Sep 16 06:35:38 2023",
+            "stop-time": "Sat Sep 16 10:00:32 2023",
+            "duration": 12293.63310098648,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-QC-2/D-QC-2_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:38 2023",
+            "stop-time": "Sat Sep 16 10:00:32 2023",
+            "duration": 12293.63310098648,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-Q-3/D-Q-3.pod5": {
+            "start-time": "Sat Sep 16 06:35:39 2023",
+            "stop-time": "Sat Sep 16 08:13:22 2023",
+            "duration": 5863.810154676437,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-Q-3/D-Q-3_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:39 2023",
+            "stop-time": "Sat Sep 16 08:13:22 2023",
+            "duration": 5863.810154676437,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-SC-3/D-SC-3.pod5": {
+            "start-time": "Sat Sep 16 06:35:40 2023",
+            "stop-time": "Sat Sep 16 08:51:55 2023",
+            "duration": 8175.758508205414,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-SC-3/D-SC-3_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:40 2023",
+            "stop-time": "Sat Sep 16 08:51:55 2023",
+            "duration": 8175.758508205414,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-QC-3/D-QC-3.pod5": {
+            "start-time": "Sat Sep 16 06:35:40 2023",
+            "stop-time": "Sat Sep 16 09:09:18 2023",
+            "duration": 9218.74322605133,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-QC-3/D-QC-3_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:40 2023",
+            "stop-time": "Sat Sep 16 09:09:18 2023",
+            "duration": 9218.74322605133,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-0-1/D-0-1.pod5": {
+            "start-time": "Sat Sep 16 06:35:40 2023",
+            "stop-time": "Sat Sep 16 09:12:59 2023",
+            "duration": 9438.630752325058,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-0-1/D-0-1_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:40 2023",
+            "stop-time": "Sat Sep 16 09:12:59 2023",
+            "duration": 9438.630752325058,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-S-1/D-S-1.pod5": {
+            "start-time": "Sat Sep 16 06:35:40 2023",
+            "stop-time": "Sat Sep 16 09:23:09 2023",
+            "duration": 10049.046587467194,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-S-1/D-S-1_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:40 2023",
+            "stop-time": "Sat Sep 16 09:23:09 2023",
+            "duration": 10049.046587467194,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-A-3/D-A-3.pod5": {
+            "start-time": "Sat Sep 16 06:35:41 2023",
+            "stop-time": "Sat Sep 16 08:26:02 2023",
+            "duration": 6621.356744527817,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-A-3/D-A-3_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:41 2023",
+            "stop-time": "Sat Sep 16 08:26:02 2023",
+            "duration": 6621.356744527817,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-C-3/D-C-3.pod5": {
+            "start-time": "Sat Sep 16 06:35:41 2023",
+            "stop-time": "Sat Sep 16 09:04:28 2023",
+            "duration": 8927.040149450302,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-C-3/D-C-3_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:41 2023",
+            "stop-time": "Sat Sep 16 09:04:28 2023",
+            "duration": 8927.040149450302,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-S-2/D-S-2.pod5": {
+            "start-time": "Sat Sep 16 06:35:41 2023",
+            "stop-time": "Sat Sep 16 08:40:43 2023",
+            "duration": 7502.065467834473,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-S-2/D-S-2_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:41 2023",
+            "stop-time": "Sat Sep 16 08:40:43 2023",
+            "duration": 7502.065467834473,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-QC-1/D-QC-1.pod5": {
+            "start-time": "Sat Sep 16 06:35:41 2023",
+            "stop-time": "Sat Sep 16 09:29:10 2023",
+            "duration": 10408.474642276764,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-QC-1/D-QC-1_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:41 2023",
+            "stop-time": "Sat Sep 16 09:29:10 2023",
+            "duration": 10408.474642276764,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-0-2/D-0-2.pod5": {
+            "start-time": "Sat Sep 16 06:35:42 2023",
+            "stop-time": "Sat Sep 16 07:38:52 2023",
+            "duration": 3790.3418486118317,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-0-2/D-0-2_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:42 2023",
+            "stop-time": "Sat Sep 16 07:38:52 2023",
+            "duration": 3790.3418486118317,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-S-3/D-S-3.pod5": {
+            "start-time": "Sat Sep 16 06:35:42 2023",
+            "stop-time": "Sat Sep 16 08:22:34 2023",
+            "duration": 6412.07618355751,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-S-3/D-S-3_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:42 2023",
+            "stop-time": "Sat Sep 16 08:22:34 2023",
+            "duration": 6412.07618355751,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-Q-2/D-Q-2.pod5": {
+            "start-time": "Sat Sep 16 06:35:42 2023",
+            "stop-time": "Sat Sep 16 09:22:19 2023",
+            "duration": 9997.350287437439,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-Q-2/D-Q-2_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:42 2023",
+            "stop-time": "Sat Sep 16 09:22:19 2023",
+            "duration": 9997.350287437439,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-A-2/D-A-2.pod5": {
+            "start-time": "Sat Sep 16 06:35:42 2023",
+            "stop-time": "Sat Sep 16 08:22:45 2023",
+            "duration": 6422.934123754501,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-A-2/D-A-2_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:42 2023",
+            "stop-time": "Sat Sep 16 08:22:45 2023",
+            "duration": 6422.934123754501,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-C-1/D-C-1.pod5": {
+            "start-time": "Sat Sep 16 06:35:42 2023",
+            "stop-time": "Sat Sep 16 09:05:18 2023",
+            "duration": 8975.96169924736,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-C-1/D-C-1_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:42 2023",
+            "stop-time": "Sat Sep 16 09:05:18 2023",
+            "duration": 8975.96169924736,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-0-3/D-0-3.pod5": {
+            "start-time": "Sat Sep 16 06:35:42 2023",
+            "stop-time": "Sat Sep 16 09:01:18 2023",
+            "duration": 8735.442924261093,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        },
+        "results/pod5/D-0-3/D-0-3_pod5_stats.tsv": {
+            "start-time": "Sat Sep 16 06:35:42 2023",
+            "stop-time": "Sat Sep 16 09:01:18 2023",
+            "duration": 8735.442924261093,
+            "priority": 0,
+            "resources": {
+                "_cores": 1,
+                "_nodes": 1,
+                "mem_mb": 1000,
+                "mem_mib": 954,
+                "disk_mb": 1000,
+                "disk_mib": 954,
+                "tmpdir": "<TBD>"
+            }
+        }
+    }
+}

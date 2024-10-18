@@ -1,0 +1,30 @@
+{
+	"__default__" :
+	{
+	  	"queue" : "general",
+		"mem": "1",
+		"threads" : 64,
+		"time" : "6:00",
+		"extra" : "",
+		"latency": "10"
+	},
+	"pod5" :
+	{
+		"queue" : "general",
+		"mem": "1",
+		"threads" : 64,
+		"time" : "6:00",
+		"extra" : "",
+		"latency": "10"
+	},
+	"mod_bases" :
+	{
+	  	"queue" : "gpuqueue",
+		"mem": "4",
+		"threads" : 42,
+		"time" : "1:00",
+		"resources": {
+			"gpu": 1
+		}
+	}
+}

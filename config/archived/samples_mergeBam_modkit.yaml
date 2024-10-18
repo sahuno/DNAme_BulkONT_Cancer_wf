@@ -1,0 +1,7 @@
+samples:
+  009N:
+    - "/data1/greenbab/projects/methyl_benchmark_spectrum/data/preprocessed/009N_rerun/modbasecalls/results/mark_duplicates/009N_1/009N_1_modBaseCalls_sorted_dup.bam"
+    - "/data1/greenbab/projects/methyl_benchmark_spectrum/data/preprocessed/009N_rerun/modbasecalls/results/mark_duplicates/009N_2/009N_2_modBaseCalls_sorted_dup.bam"
+    # - "/data1/greenbab/projects/methyl_benchmark_spectrum/data/preprocessed/009N_rerun/modbasecalls/mergebam_modkit/009N_1_modBaseCalls_sorted_dup_chr19.bam"
+    # - "/data1/greenbab/projects/methyl_benchmark_spectrum/data/preprocessed/009N_rerun/modbasecalls/mergebam_modkit/009N_2_modBaseCalls_sorted_dup_chr19.bam"
+ 

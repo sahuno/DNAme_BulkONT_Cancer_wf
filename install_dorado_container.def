@@ -1,0 +1,50 @@
+Bootstrap: docker
+From: ubuntu:20.04
+
+%post
+    # Install system dependencies
+    apt-get update && apt-get install -y --no-install-recommends \
+        curl \
+        git \
+        ca-certificates \
+        build-essential \
+        nvidia-cuda-toolkit \
+        libhdf5-dev \
+        libssl-dev \
+        libzstd-dev \
+        cmake \
+        autoconf \
+        automake
+
+    # Clone the dorado repository
+    git clone https://github.com/nanoporetech/dorado.git /dorado
+
+    # Build dorado
+    cd /dorado
+    cmake -S . -B cmake-build
+    cmake --build cmake-build --config Release -j
+
+    # Optional: Cleanup to reduce the image size
+    apt-get clean
+    rm -rf /var/lib/apt/lists/*
+
+%test
+    # Run tests to verify the build
+    ctest --test-dir /dorado/cmake-build
+
+%environment
+    # Set environment variables if needed
+    export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
+
+%runscript
+    # Commands that run when the container is executed
+    echo "Running Dorado..."
+    /dorado/cmake-build/dorado # or the correct executable path
+
+
+
+#now build the container in commadn line
+#$sudo singularity build dorado.sif Singularity.def
+
+#run the container
+#singularity run dorado.sif

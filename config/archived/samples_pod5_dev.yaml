@@ -1,0 +1,3 @@
+samples:
+    # 044N_v14: /data1/greenbab/projects/methyl_benchmark_spectrum/data/raw/pod5/044N_v14/pod5/044N_v14.pod5
+    044N_v14_minimal: /home/ahunos/apps/sandbox/modified_basecalling_mninimal_test/044T_v14_minimal.pod5

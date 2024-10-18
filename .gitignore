@@ -1,0 +1,5 @@
+results
+.snakemake
+logs/pod5
+out.txt
+err.txt

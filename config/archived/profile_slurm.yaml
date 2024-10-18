@@ -1,0 +1,11 @@
+default-resources:
+    slurm_partition: "componc_gpu"
+    # slurm_account:   "<your account>
+
+set-resources:
+    mod_bases:
+        slurm_partition: "componc_gpu" # deviating partition for this rule
+        runtime: 60 # 1 hour
+        slurm_extra: "'--gres gpu:1'"
+        mem_mb_per_cpu: 24800
+        cpus_per_task: 24

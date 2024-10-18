@@ -1,0 +1,9 @@
+samples:
+    044N_v14: /data1/greenbab/projects/methyl_benchmark_spectrum/data/raw/pod5/044N_v14/pod5/044N_v14.pod5
+    009T1: /data1/greenbab/projects/methyl_benchmark_spectrum/data/raw/pod5/009T1/results/pod5/009T1/009T1.pod5
+    044T_v14: /data1/greenbab/projects/methyl_benchmark_spectrum/data/raw/pod5/044T_v14/pod5/044T_v14.pod5
+    044T_3_notV14: /data1/greenbab/projects/methyl_benchmark_spectrum/data/raw/pod5/004_notV14/results/pod5/044T_3_notV14/044T_3_notV14.pod5
+    044T_2_notV14: /data1/greenbab/projects/methyl_benchmark_spectrum/data/raw/pod5/004_notV14/results/pod5/044T_2_notV14/044T_2_notV14.pod5
+    044N_notV14: /data1/greenbab/projects/methyl_benchmark_spectrum/data/raw/pod5/004_notV14/results/pod5/044N_notV14/044N_notV14.pod5
+    044T_1_notV14: /data1/greenbab/projects/methyl_benchmark_spectrum/data/raw/pod5/004_notV14/results/pod5/044T_1_notV14/044T_1_notV14.pod5
+    009T2: /data1/greenbab/projects/methyl_benchmark_spectrum/data/raw/pod5/009T2_rerun_smk/results/pod5/009T2/009T2.pod5

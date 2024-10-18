@@ -1,0 +1,9 @@
+samples:
+  009N:
+    0: "/path/to/file_N1.pod5"
+    1: "/path/to/file_N2.pod5"
+    2: "/path/to/file_N3.pod5"
+  009T:
+    0: "/path/to/file_T1.pod5"
+    1: "/path/to/file_T2.pod5"
+#cat /data1/greenbab/users/ahunos/apps/dorado_ont_wf/config/samples_multiple_flowcells_numbered.yaml
