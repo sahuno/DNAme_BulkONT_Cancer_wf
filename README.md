@@ -1,17 +1,27 @@
 # ONT dorado + modkit snakemake workflow
-## date - Sept 3rd 2023
+## date - Sept 3rd 2024
 ## author - samuel ahuno, mskcc
-# Methylation of cancer genomes pipeline
+# DNA Methylation of cancer genomes pipeline Oxford Nanopore
 
 ## how to run snakemake workflow
+-Add notes
+
+
+# snakefiles
+minimal haplotype resolved somatic DNAme + germline DNAme (input:pod5 per file output:phased .modbam)
+minimal workflow for modified basecalling
+
+future
+-optimized basecalling 
+
+
 ```
+FAQ
+i want it get sampling rates of each read?
+$pod5 view 
 
-faq
-i want it get sampling rates of reads
-pod5 view 
-
-i want to split pod5 into different sampling rates
-pod5 subset
+how do you split 1 big pod5 into different sampling rates
+$pod5 subset
 
 i want to run modbam for multiple modifcations 5mCG_5hmCG and 6mA
 dorado basecaller sup,5mCG_5hmCG@latest,6mA@latest ${O44N_v14Test} --device "cuda:all" --reference $refhg38 --verbose
