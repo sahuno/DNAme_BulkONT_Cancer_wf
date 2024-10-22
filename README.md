@@ -28,6 +28,17 @@ singularity exec /data1/greenbab/users/ahunos/apps/containers/ONT_tools.sif dora
 singularity exec --nv /data1/greenbab/users/ahunos/apps/containers/ONT_tools.sif dorado --version
 
 
+ONT_tools.sif includes
+dorado - modified basecalling
+modkit - extrating methylation information from Bam & DMR
+longphase - methylation-based pahsing
+pycoQC - QC 
+samtools - merge, sort and index bam file
+rust/cargo 
+
+missing
+gatkmarkduplicates 
+
 
 ```
 FAQ
@@ -97,7 +108,7 @@ $snakemake -s Snakefile.smk --cores 12 --forcerun -np #dry run with cores
 #run actual pipeline on the cluster
 $nohup snakemake -s Snakefile.smk --latency-wait 60 --restart-times 2 --keep-going --forceall --cluster "bsub -J {rule} -R "rusage[mem=32]" -W 1:00 -n 12 -o logs/cluster/{rule}.%J.out -e logs/cluster/{rule}.%J.err" -j 3 &
 
-#alternatievely make a script that run snalmake
+#alternatievely make a script that run snakmake
 $ sh run_snakefile.sh 
 $ cat run_snakefile.sh 
 #!/bin/bash
