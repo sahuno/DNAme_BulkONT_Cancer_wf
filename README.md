@@ -8,6 +8,7 @@
 
 
 # snakefiles
+we should separate basecalling & fucntional anlysis
 1. minimal haplotype resolved somatic DNAme + germline DNAme (input:pod5 per file output:phased .modbam)
 2. minimal workflow for functional analysis + visualization (modkit dmr reegions, tumor/Normal, bedgrapgs for visualization, read-level methylatyion, stattics of genomewide methylation)
 3. minimal workflow for modified basecalling (optional)
@@ -15,6 +16,14 @@
 
 future
 -batched modified basecalling per sample (for optimized basecalling)
+
+# To run
+#sotwares are in singularity container, so can be execute
+singularity exec /data1/greenbab/users/ahunos/apps/containers/ONT_tools.sif dorado --version
+
+#run basecalling with GPU
+singularity exec --nv /data1/greenbab/users/ahunos/apps/containers/ONT_tools.sif dorado --version
+
 
 
 ```
