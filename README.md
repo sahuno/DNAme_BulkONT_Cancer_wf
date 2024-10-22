@@ -8,7 +8,10 @@
 
 
 # snakefiles
-we should separate basecalling & fucntional anlysis
+separate basecalling & fucntional anlysis.
+SNV should use the same already workflow as caner genomics 
+but improve SNV-based pahsing with methylation 
+
 1. minimal haplotype resolved somatic DNAme + germline DNAme (input:pod5 per file output:phased .modbam)
 2. minimal workflow for functional analysis + visualization (modkit dmr reegions, tumor/Normal, bedgrapgs for visualization, read-level methylatyion, stattics of genomewide methylation)
 3. minimal workflow for modified basecalling (optional)
