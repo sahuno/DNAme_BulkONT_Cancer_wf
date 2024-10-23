@@ -54,3 +54,9 @@ dorado basecaller sup,5mC_5hmC@latest,6mA@latest /data1/greenbab/projects/tripli
 
 # samtools view -bS  calls_2024-10-16_T01-53-48.sam > calls_2024-10-16_T01-53-48_unsorted.bam
 # ssend numpyro samtoolsSort /data1/greenbab/users/ahunos/apps/ont_cancer_pipeline/scripts/test_modbase_calling_commands_dorado.sh
+
+#--no-home 
+# singularity exec -B /data1/greenbab --nv /data1/greenbab/users/ahunos/apps/containers/ONT_tools.sif dorado basecaller sup,5mC_5hmC@latest,6mA@latest /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/raw/TRI_DIVYA_POD5/split_by_sampleRates/results/pod5subset/split_by_sample_rate/D-0-1/sample_rate-5000.pod5 --device "cuda:all" --reference /data1/greenbab/database/mm10/mm10.fa --verbose --emit-sam --mm2-opts "-Y" #| samtools sort --threads 12 -o ONTwf_5mC5hmC6mA_D01_5000kHz_no_moves_singularity_sorted.bam -O BAM --write-index
+
+
+# dorado basecaller sup,5mC_5hmC@latest,6mA@latest /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/raw/TRI_DIVYA_POD5/split_by_sampleRates/results/pod5subset/split_by_sample_rate/D-0-1/sample_rate-5000.pod5 --device "cuda:all" --reference /data1/greenbab/database/mm10/mm10.fa --verbose --emit-sam --output-dir "ONTwf_5mC5hmC6mA_D01_5000kHz_no_moves_rerun" --mm2-opts "-Y"

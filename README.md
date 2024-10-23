@@ -29,15 +29,15 @@ singularity exec --nv /data1/greenbab/users/ahunos/apps/containers/ONT_tools.sif
 
 
 ONT_tools.sif includes
-dorado - modified basecalling
-modkit - extrating methylation information from Bam & DMR
-longphase - methylation-based pahsing
-pycoQC - QC 
-samtools - merge, sort and index bam file
-rust/cargo 
+dorado - modified basecalling (issued by ONT)
+modkit - extracting methylation information from Bam & DMR (issued by ONT)
+longphase - methylation-based phasing (https://github.com/twolinin/longphase)
+pycoQC - interative QC plots (mapping & basecalling quality) ()
+samtools - merge, sort and index bam file (Heng Li)
+rust/cargo (dependency)
 
 missing
-gatkmarkduplicates 
+GATK gatkmarkduplicates 
 
 
 ```

@@ -3,3 +3,4 @@ results
 logs/pod5
 out.txt
 err.txt
+software/*.sif

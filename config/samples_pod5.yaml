@@ -1,0 +1,9 @@
+samples:
+    044T_3_notV14: /data1/greenbab/projects/methyl_benchmark_spectrum/data/raw/pod5/split_reads/results/pod5subset/split_by_sample_rate/044T_3_notV14/sample_rate-4000.pod5 #77G
+    # 044T_v14: /data1/greenbab/projects/methyl_benchmark_spectrum/data/raw/pod5/split_reads/results/pod5subset/split_by_sample_rate/044T_v14/sample_rate-4000.pod5
+    # 044N_v14: /data1/greenbab/projects/methyl_benchmark_spectrum/data/raw/pod5/split_reads/results/pod5subset/split_by_sample_rate/044N_v14/sample_rate-4000.pod5
+    # 044N_notV14: /data1/greenbab/projects/methyl_benchmark_spectrum/data/raw/pod5/split_reads/results/pod5subset/split_by_sample_rate/044N_notV14/sample_rate-4000.pod5 #305G
+    # /data1/greenbab/projects/methyl_benchmark_spectrum/data/raw/pod5/split_reads/results/pod5subset/split_by_sample_rate/009T1/sample_rate-4000.pod5
+    # /data1/greenbab/projects/methyl_benchmark_spectrum/data/raw/pod5/split_reads/results/pod5subset/split_by_sample_rate/009T2/sample_rate-4000.pod5
+    # /data1/greenbab/projects/methyl_benchmark_spectrum/data/raw/pod5/split_reads/results/pod5subset/split_by_sample_rate/044T_1_notV14/sample_rate-4000.pod5
+    # /data1/greenbab/projects/methyl_benchmark_spectrum/data/raw/pod5/split_reads/results/pod5subset/split_by_sample_rate/044T_2_notV14/sample_rate-4000.pod5
