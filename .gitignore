@@ -4,3 +4,7 @@ logs/pod5
 out.txt
 err.txt
 software/*.sif
+.nv
+.temp_dorado_model-*
+benchmarks
+.DS_Store

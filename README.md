@@ -21,11 +21,22 @@ future
 -batched modified basecalling per sample (for optimized basecalling)
 
 # To run
-#sotwares are in singularity container, so can be execute
+#sotwares are in singularity container, so can be executed using withut snakemake
 singularity exec /data1/greenbab/users/ahunos/apps/containers/ONT_tools.sif dorado --version
 
-#run basecalling with GPU
+#Test run basecalling with singularity container in iris with GPU 
 singularity exec --nv /data1/greenbab/users/ahunos/apps/containers/ONT_tools.sif dorado --version
+
+# To run with snakemake
+1. install snakemake workflow (if you don't already have it) using the guidelines 
+https://snakemake.readthedocs.io/en/stable/getting_started/installation.html
+
+2. Run modified basecalling
+$ snakemake -s /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/DNAme_BulkONT_Cancer_wf/modified_basecalling.smk --workflow-profile /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/DNAme_BulkONT_Cancer_wf/config/cluster_profiles/slurm --jobs 10 --cores all --use-singularity --singularity-args "--nv -B /data1/greenbab" --keep-going --forceall -np
+
+NB: pls change path to reference genomes & type of species in `/config/config.yaml` 
+b. specifiy the full path to whwere you cloned this repository to
+ie. `parent_dir = "/data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/DNAme_BulkONT_Cancer_wf/"`
 
 
 ONT_tools.sif includes
@@ -39,6 +50,8 @@ rust/cargo (dependency)
 missing
 GATK gatkmarkduplicates 
 
+#get gatk docker
+`docker pull broadinstitute/gatk`
 
 ```
 FAQ
