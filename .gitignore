@@ -1,4 +1,5 @@
 results
+sandbox
 .snakemake
 logs/pod5
 out.txt

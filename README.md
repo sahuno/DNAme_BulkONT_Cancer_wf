@@ -38,6 +38,11 @@ NB: pls change path to reference genomes & type of species in `/config/config.ya
 b. specifiy the full path to whwere you cloned this repository to
 ie. `parent_dir = "/data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/DNAme_BulkONT_Cancer_wf/"`
 
+3. mark duplicates; test sucessful: TODO; add to modcall workflow & send to cluster command
+snakemake -s markDup.smk --jobs 10 --cores all --use-singularity --singularity-args "--bind /data1/greenbab"
+
+
+
 
 ONT_tools.sif includes
 dorado - modified basecalling (issued by ONT)
@@ -49,9 +54,18 @@ rust/cargo (dependency)
 
 missing
 GATK gatkmarkduplicates 
+soln: pull gatk from dockerhub into software directory
+`singularity pull gatk.sif docker://broadinstitute/gatk:latest`
 
-#get gatk docker
+#get gatk with docker
 `docker pull broadinstitute/gatk`
+
+
+
+
+
+
+
 
 ```
 FAQ
