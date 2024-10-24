@@ -2,6 +2,7 @@ results
 sandbox
 .snakemake
 logs/pod5
+logs/mod_bases
 out.txt
 err.txt
 software/*.sif

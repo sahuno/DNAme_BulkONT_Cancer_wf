@@ -721,3 +721,7 @@
 [2024-10-23 17:07:49.115] [debug] BasecallerNode chunk size 10000
 [2024-10-23 17:07:49.115] [debug] BasecallerNode chunk size 5000
 [2024-10-23 17:07:49.150] [debug] Load reads from file /data1/greenbab/projects/methyl_benchmark_spectrum/data/raw/pod5/split_reads/results/pod5subset/split_by_sample_rate/044T_3_notV14/sample_rate-4000.pod5
+[2024-10-23 21:54:59.424] [info] > Simplex reads basecalled: 593915
+[2024-10-23 21:54:59.425] [info] > Basecalled @ Samples/s: 6.714362e+06
+[2024-10-23 21:54:59.425] [debug] > Including Padding @ Samples/s: 8.098e+06 (82.91%)
+[2024-10-23 21:54:59.776] [info] > Finished

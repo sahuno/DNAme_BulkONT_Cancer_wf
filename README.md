@@ -41,7 +41,7 @@ ie. `parent_dir = "/data1/greenbab/users/ahunos/apps/workflows/methylation_workf
 3. mark duplicates; test sucessful: TODO; add to modcall workflow & send to cluster command
 snakemake -s markDup.smk --jobs 10 --cores all --use-singularity --singularity-args "--bind /data1/greenbab"
 
-
+4. call SNPS (tumor only) and phase 5mc with longphase
 
 
 ONT_tools.sif includes
