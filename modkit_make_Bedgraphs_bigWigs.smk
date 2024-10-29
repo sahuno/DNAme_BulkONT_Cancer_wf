@@ -67,3 +67,21 @@ rule BedGraphs2BigWigs:
 ruleorder: modkit > filterSortBedgraphs > BedGraphs2BigWigs
 
 # sk
+
+#D01Bam=/data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/preprocessed/snps_longphase_modcalls/s4000/sandbox/results/call_snps_indels/D-0-1_4000/tmp/phasing_output/phased_bam_output/tumor_chr19.bam
+
+#check if reads are phased?
+# samtools view -h $D01Bam | less
+# samtools view $D01Bam | awk '{for(i=12;i<=NF;i++) if($i ~ /^HP:|^PS:/) {print $0; break}}'
+
+modkit pileup --threads 16 --bedgraph {input} {params.outdir} \
+--prefix {wildcards.sample} --cpg --combine-mods --ref {params.reference_genome}
+
+#bamInprog=/data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/preprocessed/snps_longphase_modcalls/s4000/sandbox/results/results/longphase_haplotag/D-0-2_4000/D-0-2_4000_haplotagged.bam
+
+# samtools view -h $bamInprog | less
+# samtools view $bamInprog | awk '{for(i=12;i<=NF;i++) if($i ~ /^HP:|^PS:/) {print $0; break}}'
+
+
+# modkit pileup --threads {params.modkit_threads} --bedgraph {input} {params.outdir} \
+# --prefix {wildcards.sample} --cpg --ref {params.reference_genome}

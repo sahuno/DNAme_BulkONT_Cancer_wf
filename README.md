@@ -53,13 +53,16 @@ samtools - merge, sort and index bam file (Heng Li)
 rust/cargo (dependency)
 
 missing
-GATK gatkmarkduplicates 
+- GATK gatkmarkduplicates 
 soln: pull gatk from dockerhub into software directory
 `singularity pull gatk.sif docker://broadinstitute/gatk:latest`
-
 #get gatk with docker
 `docker pull broadinstitute/gatk`
 
+- whatsapp- phasing
+- [meth](https://github.com/treangenlab/methphaser)
+- anaconda/conda/mamba
+- hapcut
 
 
 
