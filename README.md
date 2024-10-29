@@ -21,27 +21,49 @@ future
 -batched modified basecalling per sample (for optimized basecalling)
 
 # To run
-#sotwares are in singularity container, so can be executed using withut snakemake
+#sotwares are in singularity container, so can be executed using without snakemake
+```
 singularity exec /data1/greenbab/users/ahunos/apps/containers/ONT_tools.sif dorado --version
+```
 
 #Test run basecalling with singularity container in iris with GPU 
+```
 singularity exec --nv /data1/greenbab/users/ahunos/apps/containers/ONT_tools.sif dorado --version
+```
 
 # To run with snakemake
 1. install snakemake workflow (if you don't already have it) using the guidelines 
 https://snakemake.readthedocs.io/en/stable/getting_started/installation.html
 
 2. Run modified basecalling
+```
 $ snakemake -s /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/DNAme_BulkONT_Cancer_wf/modified_basecalling.smk --workflow-profile /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/DNAme_BulkONT_Cancer_wf/config/cluster_profiles/slurm --jobs 10 --cores all --use-singularity --singularity-args "--nv -B /data1/greenbab" --keep-going --forceall -np
+```
 
 NB: pls change path to reference genomes & type of species in `/config/config.yaml` 
+
 b. specifiy the full path to whwere you cloned this repository to
+
 ie. `parent_dir = "/data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/DNAme_BulkONT_Cancer_wf/"`
 
 3. mark duplicates; test sucessful: TODO; add to modcall workflow & send to cluster command
 snakemake -s markDup.smk --jobs 10 --cores all --use-singularity --singularity-args "--bind /data1/greenbab"
 
 4. call SNPS (tumor only) and phase 5mc with longphase
+```
+phase_5mC.smk
+```
+
+5. Extract haplotype-resolved DNAme from bam to bedgraph, bigwig & bedmethyl for visualization, functional analysis, dmr
+modkit_make_Bedgraphs_bigWigs_HaplotypeSpec.smk
+
+
+notes on phasing
+- we attempt to co-phase snps and 5mc using long phase. 
+- bam file is tagged with haplotypes afterwards 
+- supplementary reads aren't included in the haplotagged bam file.
+- Que is this necesaary or not?
+- phased snps are heterozygous sites only
 
 
 ONT_tools.sif includes
@@ -59,8 +81,8 @@ soln: pull gatk from dockerhub into software directory
 #get gatk with docker
 `docker pull broadinstitute/gatk`
 
-- whatsapp- phasing
-- [meth](https://github.com/treangenlab/methphaser)
+- whatsapp(optional)- phasing
+- [methphaser](https://github.com/treangenlab/methphaser)
 - anaconda/conda/mamba
 - hapcut
 

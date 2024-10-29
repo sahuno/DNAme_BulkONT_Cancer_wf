@@ -75,8 +75,9 @@ set-resources:
         runtime: 1000 
         # runtime: 360 
         # slurm_extra: "'--gres gpu:4'"
-        mem_mb_per_cpu: 24800
+        # mem_mb_per_cpu: 24800
         cpus_per_task: 16
+        mem_mb: 128000
     # placeeholder_rule:
     #     slurm_partition: "componc_gpu" # deviating partition for this rule 
     #     slurm_account: "greenbab"

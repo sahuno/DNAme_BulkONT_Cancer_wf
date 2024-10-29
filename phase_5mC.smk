@@ -174,6 +174,8 @@ longphase haplotag \
 -b {input.bamfile} \
 -t 8 \
 -o {params.out_haplotagged_prefix} && touch {output.done_longphase_haplotag} 2> {log}
+
+samtools index {output.happlotagged_bam}
         """
 # --sv-file phased_sv.vcf \ #add sv calls if available
 

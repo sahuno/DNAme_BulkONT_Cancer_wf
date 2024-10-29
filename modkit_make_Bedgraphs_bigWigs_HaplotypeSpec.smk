@@ -1,11 +1,12 @@
-parent_dir = "/data1/greenbab/users/ahunos/apps/dorado_ont_wf/"
+parent_dir = "/data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/DNAme_BulkONT_Cancer_wf/"
 configfile: parent_dir + "config/config.yaml"
-configfile: "/data1/greenbab/users/ahunos/apps/dorado_ont_wf/config/samples_009TN_044TN.yaml"
+configfile: parent_dir + "config/samples_haplotaggedBams.yaml"
 
-set_species = "human"
+set_species = "mouse"
 
 # Make sample list of bedgraphs
 motifs = ["h", "m", "C"]
+Haplotypes = ["1", "1", "ungrouped"]
 strands = ["positive", "negative"]
 minCoverages = [5, 10]
 
@@ -14,19 +15,19 @@ print(f"{samplesFromConfig}")
 
 rule all:
     input:
-        expand("results/BedGraphs2BigWigs/{sample}/{sample}_{motif}_CG0_{strand}.minCov{minCov}.sorted.bw", 
-               sample=samplesFromConfig, motif=motifs, strand=strands, minCov=minCoverages)
+        expand("results/BedGraphs2BigWigs/{sample}/{sample}_{Haplotypes}_{motif}_CG0_{strand}.minCov{minCov}.sorted.bw", 
+               sample=samplesFromConfig, motif=motifs, strand=strands, minCov=minCoverages, Haplotypes=Haplotypes)
 
 rule modkit:
     input:
         lambda wildcards: config["samples"][wildcards.sample]
     output:
-        "results/modkit/{sample}/{sample}_h_CG0_negative.bedgraph",
-        "results/modkit/{sample}/{sample}_h_CG0_positive.bedgraph",
-        "results/modkit/{sample}/{sample}_m_CG0_positive.bedgraph",
-        "results/modkit/{sample}/{sample}_m_CG0_negative.bedgraph",
-        "results/modkit/{sample}/{sample}_C_CG0_negative.bedgraph",
-        "results/modkit/{sample}/{sample}_C_CG0_positive.bedgraph"
+        "results/modkit/{sample}/{sample}_{Haplotypes}_h_CG0_negative.bedgraph",
+        "results/modkit/{sample}/{sample}_{Haplotypes}_h_CG0_positive.bedgraph",
+        "results/modkit/{sample}/{sample}_{Haplotypes}_m_CG0_positive.bedgraph",
+        "results/modkit/{sample}/{sample}_{Haplotypes}_m_CG0_negative.bedgraph",
+        "results/modkit/{sample}/{sample}_{Haplotypes}_C_CG0_negative.bedgraph",
+        "results/modkit/{sample}/{sample}_{Haplotypes}_C_CG0_positive.bedgraph"
     params:
         reference_genome=lambda wildcards: config["mm10"] if set_species == "mouse" else config["hg38"],
         modkit_threads=16,
@@ -42,9 +43,9 @@ rule modkit:
 #  --region chr17
 rule filterSortBedgraphs:
     input:
-        "results/modkit/{sample}/{sample}_{motif}_CG0_{strand}.bedgraph"
+        "results/modkit/{sample}/{sample}_{Haplotypes}_{motif}_CG0_{strand}.bedgraph"
     output:
-        "results/filterSortBedgraphs/{sample}/{sample}_{motif}_CG0_{strand}.minCov{minCov}.sorted.bedgraph"
+        "results/filterSortBedgraphs/{sample}/{sample}_{Haplotypes}_{motif}_CG0_{strand}.minCov{minCov}.sorted.bedgraph"
     wildcard_constraints:
         minCov="|".join(map(str, minCoverages))
     shell:
@@ -54,9 +55,9 @@ rule filterSortBedgraphs:
 
 rule BedGraphs2BigWigs:
     input:
-        "results/filterSortBedgraphs/{sample}/{sample}_{motif}_CG0_{strand}.minCov{minCov}.sorted.bedgraph"
+        "results/filterSortBedgraphs/{sample}/{sample}_{Haplotypes}_{motif}_CG0_{strand}.minCov{minCov}.sorted.bedgraph"
     output:
-        "results/BedGraphs2BigWigs/{sample}/{sample}_{motif}_CG0_{strand}.minCov{minCov}.sorted.bw"
+        "results/BedGraphs2BigWigs/{sample}/{sample}_{Haplotypes}_{motif}_CG0_{strand}.minCov{minCov}.sorted.bw"
     params:
         chromSizes=lambda wildcards: config["mm10_chrSizes"] if set_species == "mouse" else config["hg38_chrSizes"]
     shell:
@@ -67,6 +68,9 @@ rule BedGraphs2BigWigs:
 ruleorder: modkit > filterSortBedgraphs > BedGraphs2BigWigs
 
 # sk
+
+# snakemake -s /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/DNAme_BulkONT_Cancer_wf/modkit_make_Bedgraphs_bigWigs_HaplotypeSpec.smk --workflow-profile /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/DNAme_BulkONT_Cancer_wf/config/cluster_profiles/slurm --jobs unlimited --cores all --use-singularity -np
+
 
 #D01Bam=/data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/preprocessed/snps_longphase_modcalls/s4000/sandbox/results/call_snps_indels/D-0-1_4000/tmp/phasing_output/phased_bam_output/tumor_chr19.bam
 
