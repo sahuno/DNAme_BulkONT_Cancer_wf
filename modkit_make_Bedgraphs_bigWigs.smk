@@ -77,7 +77,7 @@ ruleorder: modkit > filterSortBedgraphs > BedGraphs2BigWigs
 # mm10ref=/data1/greenbab/database/mm10/mm10.fa
 
 
-#bamInprog=/data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/preprocessed/snps_longphase_modcalls/s4000/sandbox/results/results/longphase_haplotag/D-0-2_4000/D-0-2_4000_haplotagged.bam
+# bamInprog=/data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/preprocessed/snps_longphase_modcalls/s4000/sandbox/results/results/longphase_haplotag/D-0-2_4000/D-0-2_4000_haplotagged.bam
 
 # samtools view -h $bamInprog | less
 # samtools view $bamInprog | awk '{for(i=12;i<=NF;i++) if($i ~ /^HP:|^PS:/) {print $0; break}}'

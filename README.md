@@ -55,7 +55,7 @@ phase_5mC.smk
 ```
 
 5. Extract haplotype-resolved DNAme from bam to bedgraph, bigwig & bedmethyl for visualization, functional analysis, dmr
-modkit_make_Bedgraphs_bigWigs_HaplotypeSpec.smk
+/DNAme_BulkONT_Cancer_wf/modkit_make_Bedgraphs_bigWigs_HaplotypeSpec_Fullpaths.smk
 
 
 notes on phasing
