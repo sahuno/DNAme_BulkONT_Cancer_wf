@@ -51,7 +51,7 @@ snakemake -s markDup.smk --jobs 10 --cores all --use-singularity --singularity-a
 
 4. call SNPS (tumor only) and phase 5mc with longphase
 ```
-phase_5mC.smk
+somaticVariantsCalling_DNAmeCoPhasing_tumorOnly.smk
 ```
 
 5. Extract haplotype-resolved DNAme from bam to bedgraph, bigwig & bedmethyl for visualization, functional analysis, dmr
