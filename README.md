@@ -16,6 +16,10 @@ but improve SNV-based pahsing with methylation
 2. minimal workflow for functional analysis + visualization (modkit dmr reegions, tumor/Normal, bedgrapgs for visualization, read-level methylatyion, stattics of genomewide methylation)
 3. minimal workflow for modified basecalling (optional)
 
+changes
+TODO:
+inputs for `longphase haplotag` should be snp & phased_modcall_vcf from `longphase phase`
+how to check phasing quality? snps should be 
 
 future
 -batched modified basecalling per sample (for optimized basecalling)

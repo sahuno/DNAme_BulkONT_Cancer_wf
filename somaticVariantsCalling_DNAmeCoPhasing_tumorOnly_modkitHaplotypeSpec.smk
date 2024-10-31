@@ -41,6 +41,10 @@ strands = ["positive", "negative"]
 minCoverages=5
 
 
+# ruleorder: call_snps_indels > phase_Clair3_SNVs > BedGraphs2BigWigs
+
+#longphase_haplotag > ModkitPileup_ModiStrandSpecific
+
 rule all:
     input:
         expand('results/call_snps_indels/{samples}/snv.vcf.gz', samples=config["samples"]),
@@ -260,7 +264,7 @@ rule ModkitPileup_ModiStrandSpecific:
 
 rule ModkitPileup_ModiSpecific:
     input:
-        lambda wildcards: config["samples"][wildcards.samples]
+        'results/longphase_haplotag/{samples}/{samples}_haplotagged.bam'
     output:
         "results/ModkitPileup_ModiSpecific/{samples}/{samples}_1_h_CG0_combined.bedgraph",
         "results/ModkitPileup_ModiSpecific/{samples}/{samples}_1_m_CG0_combined.bedgraph",
@@ -275,13 +279,12 @@ rule ModkitPileup_ModiSpecific:
         outdir="results/ModkitPileup_ModiSpecific/{samples}/"
     shell:
         """
-        modkit pileup --combine-strands --threads {params.modkit_threads} --bedgraph {input} {params.outdir} \
-        --prefix {wildcards.samples} --cpg --ref {params.reference_genome} --partition-tag HP
+        modkit pileup --combine-strands --threads {params.modkit_threads} --bedgraph {input} {params.outdir} --prefix {wildcards.samples} --cpg --ref {params.reference_genome} --partition-tag HP
         """
 
 rule ModkitPileup_ModiStrandCollapsed:
     input:
-        lambda wildcards: config["samples"][wildcards.samples]
+        'results/longphase_haplotag/{samples}/{samples}_haplotagged.bam'
     output:
         "results/ModkitPileup_ModiStrandCollapsed/{samples}/{samples}_1_C_CG0_combined.bedgraph",
         "results/ModkitPileup_ModiStrandCollapsed/{samples}/{samples}_2_C_CG0_combined.bedgraph",
