@@ -6,6 +6,15 @@
 ## how to run snakemake workflow
 -Add notes
 
+see `run_snakefile.sh` file
+
+where should i run
+run within `run_outputs` or any other dir to separate code from data
+
+dir `config` has;
+
+- software, slurm config files, samples.yaml, and config
+ 
 
 # snakefiles
 separate basecalling & fucntional anlysis.
@@ -16,7 +25,7 @@ but improve SNV-based pahsing with methylation
 2. minimal workflow for functional analysis + visualization (modkit dmr reegions, tumor/Normal, bedgrapgs for visualization, read-level methylatyion, stattics of genomewide methylation)
 3. minimal workflow for modified basecalling (optional)
 
-changes
+Changes
 TODO:
 inputs for `longphase haplotag` should be snp & phased_modcall_vcf from `longphase phase`
 how to check phasing quality? snps should be 
