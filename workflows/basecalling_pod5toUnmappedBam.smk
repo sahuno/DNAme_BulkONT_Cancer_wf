@@ -31,7 +31,6 @@ parent_dir = "/data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/
 configfile: parent_dir + "config/config.yaml"
 configfile: parent_dir + "config/samples_pod5.yaml"
 set_species = config["set_species"]
-# /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/DNAme_BulkONT_Cancer_wf/workflows/basecalling_pod5toUnmappedBam.smk
 
 #clean up; to test script again
 # rm -rf .snakemake benchmarks results
