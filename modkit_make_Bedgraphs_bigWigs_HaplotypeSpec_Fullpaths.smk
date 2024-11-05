@@ -17,7 +17,7 @@ set_species = "mouse"
 
 # Make sample list of bedgraphs
 samplesFromConfig = list(config["samples"].keys())
-print(f"{samplesFromConfig}")
+# print(f"{samplesFromConfig}")
 
 #wildcards
 motifs = ["h", "m", "C"]
@@ -36,64 +36,64 @@ minCoverages=5
 
 ##Analysis process 
 #1. with strand 5mC/5hmC collapsed, is there difference haploype 1  vrs haplotype 2? 
-# expand("results/ModkitPileup_ModiStrandCollapsed/{sample}/{sample}_1_C_CG0_combined.bedgraph", sample=samplesFromConfig),
-# expand("results/ModkitPileup_ModiStrandCollapsed/{sample}/{sample}_2_C_CG0_combined.bedgraph", sample=samplesFromConfig),
+# expand("results/ModkitPileup_ModiStrandCollapsed/{samples}/{samples}_1_C_CG0_combined.bedgraph", samples=config["samples"]),
+# expand("results/ModkitPileup_ModiStrandCollapsed/{samples}/{samples}_2_C_CG0_combined.bedgraph", samples=config["samples"]),
 
 rule all:
     input:
-        expand("results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_1_h_CG0_negative.bedgraph", sample=samplesFromConfig),
-        expand("results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_1_h_CG0_positive.bedgraph", sample=samplesFromConfig),
-        expand("results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_1_m_CG0_negative.bedgraph", sample=samplesFromConfig),
-        expand("results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_1_m_CG0_positive.bedgraph", sample=samplesFromConfig),
-        expand("results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_2_h_CG0_negative.bedgraph", sample=samplesFromConfig),
-        expand("results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_2_h_CG0_positive.bedgraph", sample=samplesFromConfig),
-        expand("results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_2_m_CG0_negative.bedgraph", sample=samplesFromConfig),
-        expand("results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_2_m_CG0_positive.bedgraph", sample=samplesFromConfig),
-        expand("results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_ungrouped_h_CG0_negative.bedgraph", sample=samplesFromConfig),
-        expand("results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_ungrouped_h_CG0_positive.bedgraph", sample=samplesFromConfig),
-        expand("results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_ungrouped_m_CG0_negative.bedgraph", sample=samplesFromConfig),
-        expand("results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_ungrouped_m_CG0_positive.bedgraph", sample=samplesFromConfig),
+        expand("results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_1_h_CG0_negative.bedgraph", samples=config["samples"]),
+        expand("results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_1_h_CG0_positive.bedgraph", samples=config["samples"]),
+        expand("results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_1_m_CG0_negative.bedgraph", samples=config["samples"]),
+        expand("results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_1_m_CG0_positive.bedgraph", samples=config["samples"]),
+        expand("results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_2_h_CG0_negative.bedgraph", samples=config["samples"]),
+        expand("results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_2_h_CG0_positive.bedgraph", samples=config["samples"]),
+        expand("results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_2_m_CG0_negative.bedgraph", samples=config["samples"]),
+        expand("results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_2_m_CG0_positive.bedgraph", samples=config["samples"]),
+        expand("results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_ungrouped_h_CG0_negative.bedgraph", samples=config["samples"]),
+        expand("results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_ungrouped_h_CG0_positive.bedgraph", samples=config["samples"]),
+        expand("results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_ungrouped_m_CG0_negative.bedgraph", samples=config["samples"]),
+        expand("results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_ungrouped_m_CG0_positive.bedgraph", samples=config["samples"]),
         # ModkitPileup_ModiSpecific outputs
-        expand("results/ModkitPileup_ModiSpecific/{sample}/{sample}_1_h_CG0_combined.bedgraph", sample=samplesFromConfig),
-        expand("results/ModkitPileup_ModiSpecific/{sample}/{sample}_1_m_CG0_combined.bedgraph", sample=samplesFromConfig),
-        expand("results/ModkitPileup_ModiSpecific/{sample}/{sample}_2_h_CG0_combined.bedgraph", sample=samplesFromConfig),
-        expand("results/ModkitPileup_ModiSpecific/{sample}/{sample}_2_m_CG0_combined.bedgraph", sample=samplesFromConfig),
-        expand("results/ModkitPileup_ModiSpecific/{sample}/{sample}_ungrouped_h_CG0_combined.bedgraph", sample=samplesFromConfig),
-        expand("results/ModkitPileup_ModiSpecific/{sample}/{sample}_ungrouped_m_CG0_combined.bedgraph", sample=samplesFromConfig),
+        expand("results/ModkitPileup_ModiSpecific/{samples}/{samples}_1_h_CG0_combined.bedgraph", samples=config["samples"]),
+        expand("results/ModkitPileup_ModiSpecific/{samples}/{samples}_1_m_CG0_combined.bedgraph", samples=config["samples"]),
+        expand("results/ModkitPileup_ModiSpecific/{samples}/{samples}_2_h_CG0_combined.bedgraph", samples=config["samples"]),
+        expand("results/ModkitPileup_ModiSpecific/{samples}/{samples}_2_m_CG0_combined.bedgraph", samples=config["samples"]),
+        expand("results/ModkitPileup_ModiSpecific/{samples}/{samples}_ungrouped_h_CG0_combined.bedgraph", samples=config["samples"]),
+        expand("results/ModkitPileup_ModiSpecific/{samples}/{samples}_ungrouped_m_CG0_combined.bedgraph", samples=config["samples"]),
         # ModkitPileup_ModiStrandCollapsed outputs
-        expand("results/ModkitPileup_ModiStrandCollapsed/{sample}/{sample}_1_C_CG0_combined.bedgraph", sample=samplesFromConfig),
-        expand("results/ModkitPileup_ModiStrandCollapsed/{sample}/{sample}_2_C_CG0_combined.bedgraph", sample=samplesFromConfig),
-        expand("results/ModkitPileup_ModiStrandCollapsed/{sample}/{sample}_ungrouped_C_CG0_combined.bedgraph", sample=samplesFromConfig),
-        expand("results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_{Haplotypes}_{motifs_for_splitModNStrand}_CG0_{strand}.minCov{minCov}.sorted.bedgraph", sample=samplesFromConfig, motifs_for_splitModNStrand=motifs_for_splitModNStrand, strand=strands, minCov=[minCoverages], Haplotypes=Haplotypes, allow_missing=True),
-        expand("results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiStrandSpecific/{sample}/bigWig/{sample}_{Haplotypes}_{motifs_for_splitModNStrand}_CG0_{strand}.minCov{minCov}.sorted.bw", sample=samplesFromConfig, motifs_for_splitModNStrand=motifs_for_splitModNStrand, strand=strands, minCov=[minCoverages], Haplotypes=Haplotypes, allow_missing=True),
-        expand("results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiSpecific/{sample}/{sample}_{Haplotypes}_{motifs_for_splitModNStrand}_CG0_combined.minCov{minCov}.sorted.bedgraph", sample=samplesFromConfig, motifs_for_splitModNStrand=motifs_for_splitModNStrand, minCov=[minCoverages], Haplotypes=Haplotypes, allow_missing=True),
-        expand("results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiSpecific/{sample}/bigWig/{sample}_{Haplotypes}_{motifs_for_splitModNStrand}_CG0_combined.minCov{minCov}.sorted.bw", sample=samplesFromConfig, motifs_for_splitModNStrand=motifs_for_splitModNStrand, minCov=[minCoverages], Haplotypes=Haplotypes, allow_missing=True),
-        expand("results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiStrandCollapsed/{sample}/{sample}_{Haplotypes}_C_CG0_combined.minCov{minCov}.sorted.bedgraph", sample=samplesFromConfig, minCov=[minCoverages], Haplotypes=Haplotypes, allow_missing=True),
-        expand("results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiStrandCollapsed/{sample}/bigWig/{sample}_{Haplotypes}_C_CG0_combined.minCov{minCov}.sorted.bw", sample=samplesFromConfig, minCov=[minCoverages], Haplotypes=Haplotypes, allow_missing=True),
+        expand("results/ModkitPileup_ModiStrandCollapsed/{samples}/{samples}_1_C_CG0_combined.bedgraph", samples=config["samples"]),
+        expand("results/ModkitPileup_ModiStrandCollapsed/{samples}/{samples}_2_C_CG0_combined.bedgraph", samples=config["samples"]),
+        expand("results/ModkitPileup_ModiStrandCollapsed/{samples}/{samples}_ungrouped_C_CG0_combined.bedgraph", samples=config["samples"]),
+        expand("results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_{Haplotypes}_{motifs_for_splitModNStrand}_CG0_{strand}.minCov{minCov}.sorted.bedgraph", samples=config["samples"], motifs_for_splitModNStrand=motifs_for_splitModNStrand, strand=strands, minCov=[minCoverages], Haplotypes=Haplotypes, allow_missing=True),
+        expand("results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiStrandSpecific/{samples}/bigWig/{samples}_{Haplotypes}_{motifs_for_splitModNStrand}_CG0_{strand}.minCov{minCov}.sorted.bw", samples=config["samples"], motifs_for_splitModNStrand=motifs_for_splitModNStrand, strand=strands, minCov=[minCoverages], Haplotypes=Haplotypes, allow_missing=True),
+        expand("results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiSpecific/{samples}/{samples}_{Haplotypes}_{motifs_for_splitModNStrand}_CG0_combined.minCov{minCov}.sorted.bedgraph", samples=config["samples"], motifs_for_splitModNStrand=motifs_for_splitModNStrand, minCov=[minCoverages], Haplotypes=Haplotypes, allow_missing=True),
+        expand("results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiSpecific/{samples}/bigWig/{samples}_{Haplotypes}_{motifs_for_splitModNStrand}_CG0_combined.minCov{minCov}.sorted.bw", samples=config["samples"], motifs_for_splitModNStrand=motifs_for_splitModNStrand, minCov=[minCoverages], Haplotypes=Haplotypes, allow_missing=True),
+        expand("results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiStrandCollapsed/{samples}/{samples}_{Haplotypes}_C_CG0_combined.minCov{minCov}.sorted.bedgraph", samples=config["samples"], minCov=[minCoverages], Haplotypes=Haplotypes, allow_missing=True),
+        expand("results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiStrandCollapsed/{samples}/bigWig/{samples}_{Haplotypes}_C_CG0_combined.minCov{minCov}.sorted.bw", samples=config["samples"], minCov=[minCoverages], Haplotypes=Haplotypes, allow_missing=True),
         
 
 
 rule ModkitPileup_ModiStrandSpecific:
     input:
-        lambda wildcards: config["samples"][wildcards.sample]
+        lambda wildcards: config["samples"][wildcards.samples]
     output:
-        "results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_1_h_CG0_negative.bedgraph",
-        "results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_1_h_CG0_positive.bedgraph",
-        "results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_1_m_CG0_negative.bedgraph",
-        "results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_1_m_CG0_positive.bedgraph",
-        "results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_2_h_CG0_negative.bedgraph",
-        "results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_2_h_CG0_positive.bedgraph",
-        "results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_2_m_CG0_negative.bedgraph",
-        "results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_2_m_CG0_positive.bedgraph",
-        "results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_ungrouped_h_CG0_negative.bedgraph",
-        "results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_ungrouped_h_CG0_positive.bedgraph",
-        "results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_ungrouped_m_CG0_negative.bedgraph",
-        "results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_ungrouped_m_CG0_positive.bedgraph"
+        "results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_1_h_CG0_negative.bedgraph",
+        "results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_1_h_CG0_positive.bedgraph",
+        "results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_1_m_CG0_negative.bedgraph",
+        "results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_1_m_CG0_positive.bedgraph",
+        "results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_2_h_CG0_negative.bedgraph",
+        "results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_2_h_CG0_positive.bedgraph",
+        "results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_2_m_CG0_negative.bedgraph",
+        "results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_2_m_CG0_positive.bedgraph",
+        "results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_ungrouped_h_CG0_negative.bedgraph",
+        "results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_ungrouped_h_CG0_positive.bedgraph",
+        "results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_ungrouped_m_CG0_negative.bedgraph",
+        "results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_ungrouped_m_CG0_positive.bedgraph"
     params:
         reference_genome=lambda wildcards: config["mm10"] if set_species == "mouse" else config["hg38"],
         modkit_threads=16,
         modkit_prob_percentiles=0.1,
-        outdir="results/ModkitPileup_ModiStrandSpecific/{sample}/"
+        outdir="results/ModkitPileup_ModiStrandSpecific/{samples}/"
     shell:
         """
         modkit pileup --threads {params.modkit_threads} --bedgraph {input} {params.outdir} \
@@ -104,17 +104,17 @@ rule ModkitPileup_ModiSpecific:
     input:
         lambda wildcards: config["samples"][wildcards.sample]
     output:
-        "results/ModkitPileup_ModiSpecific/{sample}/{sample}_1_h_CG0_combined.bedgraph",
-        "results/ModkitPileup_ModiSpecific/{sample}/{sample}_1_m_CG0_combined.bedgraph",
-        "results/ModkitPileup_ModiSpecific/{sample}/{sample}_2_h_CG0_combined.bedgraph",
-        "results/ModkitPileup_ModiSpecific/{sample}/{sample}_2_m_CG0_combined.bedgraph",
-        "results/ModkitPileup_ModiSpecific/{sample}/{sample}_ungrouped_h_CG0_combined.bedgraph",
-        "results/ModkitPileup_ModiSpecific/{sample}/{sample}_ungrouped_m_CG0_combined.bedgraph"
+        "results/ModkitPileup_ModiSpecific/{samples}/{samples}_1_h_CG0_combined.bedgraph",
+        "results/ModkitPileup_ModiSpecific/{samples}/{samples}_1_m_CG0_combined.bedgraph",
+        "results/ModkitPileup_ModiSpecific/{samples}/{samples}_2_h_CG0_combined.bedgraph",
+        "results/ModkitPileup_ModiSpecific/{samples}/{samples}_2_m_CG0_combined.bedgraph",
+        "results/ModkitPileup_ModiSpecific/{samples}/{samples}_ungrouped_h_CG0_combined.bedgraph",
+        "results/ModkitPileup_ModiSpecific/{samples}/{samples}_ungrouped_m_CG0_combined.bedgraph"
     params:
         reference_genome=lambda wildcards: config["mm10"] if set_species == "mouse" else config["hg38"],
         modkit_threads=16,
         modkit_prob_percentiles=0.1,
-        outdir="results/ModkitPileup_ModiSpecific/{sample}/"
+        outdir="results/ModkitPileup_ModiSpecific/{samples}/"
     shell:
         """
         modkit pileup --combine-strands --threads {params.modkit_threads} --bedgraph {input} {params.outdir} \
@@ -125,14 +125,14 @@ rule ModkitPileup_ModiStrandCollapsed:
     input:
         lambda wildcards: config["samples"][wildcards.sample]
     output:
-        "results/ModkitPileup_ModiStrandCollapsed/{sample}/{sample}_1_C_CG0_combined.bedgraph",
-        "results/ModkitPileup_ModiStrandCollapsed/{sample}/{sample}_2_C_CG0_combined.bedgraph",
-        "results/ModkitPileup_ModiStrandCollapsed/{sample}/{sample}_ungrouped_C_CG0_combined.bedgraph"
+        "results/ModkitPileup_ModiStrandCollapsed/{samples}/{samples}_1_C_CG0_combined.bedgraph",
+        "results/ModkitPileup_ModiStrandCollapsed/{samples}/{samples}_2_C_CG0_combined.bedgraph",
+        "results/ModkitPileup_ModiStrandCollapsed/{samples}/{samples}_ungrouped_C_CG0_combined.bedgraph"
     params:
         reference_genome=lambda wildcards: config["mm10"] if set_species == "mouse" else config["hg38"],
         modkit_threads=16,
         modkit_prob_percentiles=0.1,
-        outdir="results/ModkitPileup_ModiStrandCollapsed/{sample}/"
+        outdir="results/ModkitPileup_ModiStrandCollapsed/{samples}/"
     shell:
         """
         modkit pileup --combine-mods --combine-strands --threads {params.modkit_threads} --bedgraph {input} {params.outdir} \
@@ -141,10 +141,10 @@ rule ModkitPileup_ModiStrandCollapsed:
 
 rule filteredSortedBedgraphsBigwigs_ModiStrandSpecific:
     input:
-        f"results/ModkitPileup_ModiStrandSpecific/{{sample}}/{{sample}}_{{Haplotypes}}_{{motifs_for_splitModNStrand}}_CG0_{{strand}}.bedgraph"
+        f"results/ModkitPileup_ModiStrandSpecific/{{samples}}/{{samples}}_{{Haplotypes}}_{{motifs_for_splitModNStrand}}_CG0_{{strand}}.bedgraph"
     output:
-        bgs="results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_{Haplotypes}_{motifs_for_splitModNStrand}_CG0_{strand}.minCov{minCov}.sorted.bedgraph",
-        bws="results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiStrandSpecific/{sample}/bigWig/{sample}_{Haplotypes}_{motifs_for_splitModNStrand}_CG0_{strand}.minCov{minCov}.sorted.bw"
+        bgs="results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_{Haplotypes}_{motifs_for_splitModNStrand}_CG0_{strand}.minCov{minCov}.sorted.bedgraph",
+        bws="results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiStrandSpecific/{samples}/bigWig/{samples}_{Haplotypes}_{motifs_for_splitModNStrand}_CG0_{strand}.minCov{minCov}.sorted.bw"
     params:
         minCov=minCoverages,
         chromSizes=lambda wildcards: config["mm10_chrSizes"] if set_species == "mouse" else config["hg38_chrSizes"]
@@ -156,11 +156,11 @@ rule filteredSortedBedgraphsBigwigs_ModiStrandSpecific:
 
 rule filteredSortedBedgraphsBigwigs_ModiSpecific:
     input:
-        f"results/ModkitPileup_ModiSpecific/{{sample}}/{{sample}}_{{Haplotypes}}_{{motifs_for_splitModNStrand}}_CG0_combined.bedgraph",
+        f"results/ModkitPileup_ModiSpecific/{{samples}}/{{samples}}_{{Haplotypes}}_{{motifs_for_splitModNStrand}}_CG0_combined.bedgraph",
 
     output:
-        bgs="results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiSpecific/{sample}/{sample}_{Haplotypes}_{motifs_for_splitModNStrand}_CG0_combined.minCov{minCov}.sorted.bedgraph",
-        bws="results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiSpecific/{sample}/bigWig/{sample}_{Haplotypes}_{motifs_for_splitModNStrand}_CG0_combined.minCov{minCov}.sorted.bw"
+        bgs="results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiSpecific/{samples}/{samples}_{Haplotypes}_{motifs_for_splitModNStrand}_CG0_combined.minCov{minCov}.sorted.bedgraph",
+        bws="results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiSpecific/{samples}/bigWig/{samples}_{Haplotypes}_{motifs_for_splitModNStrand}_CG0_combined.minCov{minCov}.sorted.bw"
     params:
         minCov=minCoverages,
         chromSizes=lambda wildcards: config["mm10_chrSizes"] if set_species == "mouse" else config["hg38_chrSizes"]
@@ -173,10 +173,10 @@ rule filteredSortedBedgraphsBigwigs_ModiSpecific:
 
 rule filteredSortedBedgraphsBigwigs_ModiStrandCollapsed:
     input:
-        f"results/ModkitPileup_ModiStrandCollapsed/{{sample}}/{{sample}}_{{Haplotypes}}_C_CG0_combined.bedgraph"
+        f"results/ModkitPileup_ModiStrandCollapsed/{{samples}}/{{samples}}_{{Haplotypes}}_C_CG0_combined.bedgraph"
     output:
-        bgs="results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiStrandCollapsed/{sample}/{sample}_{Haplotypes}_C_CG0_combined.minCov{minCov}.sorted.bedgraph",
-        bws="results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiStrandCollapsed/{sample}/bigWig/{sample}_{Haplotypes}_C_CG0_combined.minCov{minCov}.sorted.bw"
+        bgs="results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiStrandCollapsed/{samples}/{samples}_{Haplotypes}_C_CG0_combined.minCov{minCov}.sorted.bedgraph",
+        bws="results/filteredSortedBedgraphsBigwigs/ModkitPileup_ModiStrandCollapsed/{samples}/bigWig/{samples}_{Haplotypes}_C_CG0_combined.minCov{minCov}.sorted.bw"
     params:
         minCov=minCoverages,
         chromSizes=lambda wildcards: config["mm10_chrSizes"] if set_species == "mouse" else config["hg38_chrSizes"]
@@ -227,9 +227,9 @@ rule filteredSortedBedgraphsBigwigs_ModiStrandCollapsed:
 
 # rule filteredBedGraphs2BigWigs:
 #     input:
-#         "results/filteredBedGraphs2BigWigs/{sample}/{sample}_{Haplotypes}_{motif}_CG0_{strand}.minCov{minCov}.sorted.bedgraph"
+#         "results/filteredBedGraphs2BigWigs/{samples}/{samples}_{Haplotypes}_{motif}_CG0_{strand}.minCov{minCov}.sorted.bedgraph"
 #     output:
-#         "results/filteredBedGraphs2BigWigs/{sample}/{sample}_{Haplotypes}_{motif}_CG0_{strand}.minCov{minCov}.sorted.bw"
+#         "results/filteredBedGraphs2BigWigs/{samples}/{samples}_{Haplotypes}_{motif}_CG0_{strand}.minCov{minCov}.sorted.bw"
 #     params:
 #         chromSizes=lambda wildcards: config["mm10_chrSizes"] if set_species == "mouse" else config["hg38_chrSizes"]
 #     shell:
@@ -245,9 +245,9 @@ rule filteredSortedBedgraphsBigwigs_ModiStrandCollapsed:
 
         # if wildcards.motif in ["h", "m"] else
         # f"results/ModkitPileup_ModiSpecific/{wildcards.sample}/{wildcards.sample}_{wildcards.Haplotypes}_C_CG0_combined.bedgraph",
-        # "results/ModkitPileup_ModiStrandSpecific/{sample}/{sample}_{Haplotypes}_{motif}_CG0_{strand}.bedgraph",
+        # "results/ModkitPileup_ModiStrandSpecific/{samples}/{samples}_{Haplotypes}_{motif}_CG0_{strand}.bedgraph",
         # f"results/ModkitPileup_ModiSpecific/{wildcards.sample}/{wildcards.sample}_{wildcards.Haplotypes}_{wildcards.motif}_CG0_combined.bedgraph",
-        #  "results/ModkitPileup_ModiStrandCollapsed/{sample}/{sample}_{Haplotypes}_C_CG0_combined.bedgraph"
+        #  "results/ModkitPileup_ModiStrandCollapsed/{samples}/{samples}_{Haplotypes}_C_CG0_combined.bedgraph"
 
 
 
@@ -293,7 +293,7 @@ rule filteredSortedBedgraphsBigwigs_ModiStrandCollapsed:
 
 
 
-# # pl sprefix with `"results/ModkitPileup_ModiSpecific/{sample}/` like previous ones
+# # pl sprefix with `"results/ModkitPileup_ModiSpecific/{samples}/` like previous ones
 # # # D02_1_h_CG0_combined.bedgraph
 # # # D02_1_m_CG0_combined.bedgraph
 # # # D02_2_h_CG0_combined.bedgraph
