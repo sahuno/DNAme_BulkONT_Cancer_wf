@@ -5,8 +5,11 @@
 # snakemake -s /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/DNAme_BulkONT_Cancer_wf/somaticVariantsCalling_DNAmeCoPhasing_tumorOnly_modkitHaplotypeSpec.smk --cores all --jobs unlimited --forcerun --printshellcmds --use-singularity --singularity-args "--bind /data1/greenbab" -np
 
 # rm -rf .snakemake benchmarks results
+
 #run on slurm
-# snakemake -s /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/DNAme_BulkONT_Cancer_wf/somaticVariantsCalling_DNAmeCoPhasing_tumorOnly_modkitHaplotypeSpec.smk --workflow-profile /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/DNAme_BulkONT_Cancer_wf/config/cluster_profiles/slurm --jobs unlimited --cores all --use-singularity -np
+# snakemake -s /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/DNAme_BulkONT_Cancer_wf/workflows/somaticVariantsCalling_DNAmeCoPhasing_tumorOnly_modkitHaplotypeSpec.smk \
+# --workflow-profile /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/DNAme_BulkONT_Cancer_wf/config/cluster_profiles/slurm \
+# --jobs unlimited --cores all --use-singularity -np
 
 
 
@@ -175,7 +178,7 @@ rule longphase_coPhase:
     input:
         bamfile=lambda wildcards: config["samples"][wildcards.samples],
         modcallfile='results/longphase_modcall/{samples}/modcall_{samples}.vcf',
-        # snpFile='results/call_snps_indels/{samples}/snv.vcf.gz'
+        snpFile='results/call_snps_indels/{samples}/snv.vcf.gz',
         phased_SNVs_Clair3='results/phase_Clair3_SNVs/{samples}/{samples}_phased.vcf'
     params:
         reference_genome=lambda wildcards: config["mm10"] if set_species == "mouse" else config["hg38"],
@@ -191,7 +194,7 @@ rule longphase_coPhase:
     shell:
         """
 longphase phase \
--s {input.phased_SNVs_Clair3} \
+-s {input.snpFile} \
 --mod-file {input.modcallfile} \
 -b {input.bamfile} \
 -r {params.reference_genome} \
@@ -205,8 +208,8 @@ rule longphase_haplotag:
         bamfile=lambda wildcards: config["samples"][wildcards.samples],
         # snpFile='results/call_snps_indels/{samples}/snv.vcf.gz',
         co_phased_mod_vcf='results/longphase_coPhase/{samples}/{samples}_mod.vcf',
-        phased_SNVs_Clair3in='results/phase_Clair3_SNVs/{samples}/{samples}_phased.vcf'
-        # modcall='results/longphase_modcall/{samples}/modcall_{samples}.vcf'
+        phased_SNVs_Clair3in='results/phase_Clair3_SNVs/{samples}/{samples}_phased.vcf',
+        modcall='results/longphase_modcall/{samples}/modcall_{samples}.vcf'
         # co_phased_vcf='results/longphase_coPhase/{samples}/{samples}.vcf'
     params:
         reference_genome=lambda wildcards: config["mm10"] if set_species == "mouse" else config["hg38"],
@@ -222,7 +225,7 @@ rule longphase_haplotag:
     shell:
         """
 longphase haplotag \
--s {input.phased_SNVs_Clair3in} \
+-s {input.modcall} \
 --mod-file {input.co_phased_mod_vcf} \
 -r {params.reference_genome} \
 -b {input.bamfile} \

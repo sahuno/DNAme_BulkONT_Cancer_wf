@@ -10,3 +10,5 @@ software/*.sif
 .temp_dorado_model-*
 benchmarks
 .DS_Store
+merged_somatic.vcf.gz
+run_outputs/

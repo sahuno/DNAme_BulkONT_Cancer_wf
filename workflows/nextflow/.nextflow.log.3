@@ -1,0 +1,74 @@
+Mar-21 19:46:42.175 [main] DEBUG nextflow.cli.Launcher - $> nextflow run merge_vcfs.nf --vcfs '/data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/preprocessed/snps_longphase_modcalls/s4000/phased_modifications/archived/results/call_snps_indels/D-A-1_4000/snv.vcf.gz /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/preprocessed/snps_longphase_modcalls/s4000/phased_modifications/archived/results/call_snps_indels/D-A-2_4000/snv.vcf.gz /data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/preprocessed/snps_longphase_modcalls/s4000/phased_modifications/archived/results/call_snps_indels/D-A-3_4000/snv.vcf.gz'
+Mar-21 19:46:42.404 [main] DEBUG nextflow.cli.CmdRun - N E X T F L O W  ~  version 24.04.1
+Mar-21 19:46:42.431 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/home/ahunos/.nextflow/plugins; core-plugins: nf-amazon@2.5.2,nf-azure@1.6.0,nf-cloudcache@0.4.1,nf-codecommit@0.2.0,nf-console@1.1.3,nf-ga4gh@1.3.0,nf-google@1.13.2,nf-tower@1.9.1,nf-wave@1.4.2
+Mar-21 19:46:42.539 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Mar-21 19:46:42.568 [main] INFO  o.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Mar-21 19:46:42.582 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.10.0 in 'deployment' mode
+Mar-21 19:46:42.610 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Mar-21 19:46:42.788 [main] DEBUG n.secret.LocalSecretsProvider - Secrets store: /home/ahunos/.nextflow/secrets/store.json
+Mar-21 19:46:42.801 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@5b3f3ba0] - activable => nextflow.secret.LocalSecretsProvider@5b3f3ba0
+Mar-21 19:46:42.920 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declaration
+Mar-21 19:46:42.947 [main] DEBUG nextflow.cli.CmdRun - Launching `merge_vcfs.nf` [backstabbing_ardinghelli] DSL2 - revision: 89f0f1fd65
+Mar-21 19:46:42.952 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Mar-21 19:46:42.955 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Mar-21 19:46:43.088 [main] DEBUG nextflow.Session - Session UUID: 4c54482e-2a8b-428c-9ee2-673cc0550f2f
+Mar-21 19:46:43.100 [main] DEBUG nextflow.Session - Run name: backstabbing_ardinghelli
+Mar-21 19:46:43.111 [main] DEBUG nextflow.Session - Executor pool size: 2
+Mar-21 19:46:43.122 [main] DEBUG nextflow.file.FilePorter - File porter settings maxRetries=3; maxTransfers=50; pollTimeout=null
+Mar-21 19:46:43.131 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=10; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Mar-21 19:46:43.205 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 24.04.1 build 5913
+  Created: 20-05-2024 09:48 UTC (05:48 EDT)
+  System: Linux 4.18.0-425.19.2.el8_7.x86_64
+  Runtime: Groovy 4.0.21 on OpenJDK 64-Bit Server VM 17.0.10+7
+  Encoding: UTF-8 (UTF-8)
+  Process: 3814249@isca017.mskcc.org [10.247.112.133]
+  CPUs: 1 - Mem: 200 GB (199.3 GB) - Swap: 0 (0)
+Mar-21 19:46:43.312 [main] DEBUG nextflow.Session - Work-dir: /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/DNAme_BulkONT_Cancer_wf/workflows/nextflow/work [UNKNOWN (0x18031977)]
+Mar-21 19:46:43.313 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/DNAme_BulkONT_Cancer_wf/workflows/nextflow/bin
+Mar-21 19:46:43.331 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Mar-21 19:46:43.354 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Mar-21 19:46:43.405 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Mar-21 19:46:43.421 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 2; maxThreads: 1000
+Mar-21 19:46:43.721 [main] DEBUG nextflow.Session - Session start
+Mar-21 19:46:44.985 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Mar-21 19:46:45.257 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Mar-21 19:46:45.261 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Mar-21 19:46:45.279 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Mar-21 19:46:45.287 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=1; memory=200 GB; capacity=1; pollInterval=100ms; dumpInterval=5m
+Mar-21 19:46:45.292 [main] DEBUG n.processor.TaskPollingMonitor - >>> barrier register (monitor: local)
+Mar-21 19:46:45.503 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: mergeVcfs
+Mar-21 19:46:45.514 [main] DEBUG nextflow.Session - Igniting dataflow network (1)
+Mar-21 19:46:45.531 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > mergeVcfs
+Mar-21 19:46:45.533 [main] DEBUG nextflow.script.ScriptRunner - Parsed script files:
+  Script_debb196e00ffb954: /data1/greenbab/users/ahunos/apps/workflows/methylation_workflows/DNAme_BulkONT_Cancer_wf/workflows/nextflow/merge_vcfs.nf
+Mar-21 19:46:45.533 [main] DEBUG nextflow.script.ScriptRunner - > Awaiting termination 
+Mar-21 19:46:45.534 [main] DEBUG nextflow.Session - Session await
+Mar-21 19:46:45.744 [Actor Thread 3] DEBUG nextflow.processor.TaskProcessor - Process mergeVcfs > collision check staging file names: [snv.vcf.gz:3]
+Mar-21 19:46:45.750 [Actor Thread 3] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=mergeVcfs; work-dir=null
+  error [nextflow.exception.ProcessUnrecoverableException]: Process `mergeVcfs` input file name collision -- There are multiple input files for each of the following file names: snv.vcf.gz
+Mar-21 19:46:45.788 [Actor Thread 3] ERROR nextflow.processor.TaskProcessor - Error executing process > 'mergeVcfs'
+
+Caused by:
+  Process `mergeVcfs` input file name collision -- There are multiple input files for each of the following file names: snv.vcf.gz
+
+
+
+Tip: when you have fixed the problem you can continue the execution adding the option `-resume` to the run command line
+Mar-21 19:46:46.304 [Actor Thread 3] DEBUG nextflow.Session - Session aborted -- Cause: Process `mergeVcfs` input file name collision -- There are multiple input files for each of the following file names: snv.vcf.gz
+Mar-21 19:46:46.335 [Actor Thread 3] DEBUG nextflow.Session - The following nodes are still active:
+[process] mergeVcfs
+  status=ACTIVE
+  port 0: (value) bound ; channel: vcfs
+  port 1: (cntrl) -     ; channel: $
+
+Mar-21 19:46:46.344 [Task monitor] DEBUG n.processor.TaskPollingMonitor - <<< barrier arrives (monitor: local) - terminating tasks monitor poll loop
+Mar-21 19:46:46.360 [main] DEBUG nextflow.Session - Session await > all processes finished
+Mar-21 19:46:46.361 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Mar-21 19:46:46.365 [main] DEBUG n.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=0; peakCpus=0; peakMemory=0; ]
+Mar-21 19:46:46.372 [Actor Thread 1] DEBUG nextflow.processor.TaskProcessor - Handling unexpected condition for
+  task: name=mergeVcfs; work-dir=null
+  error [java.lang.InterruptedException]: java.lang.InterruptedException
+Mar-21 19:46:46.580 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Mar-21 19:46:46.719 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

@@ -1,11 +1,11 @@
 default-resources:
-    slurm_partition: "componc_cpu"
+    slurm_partition: "cpushort"
     slurm_account: "greenbab"
-    runtime: 1440 #time is in minutes; 2hrs
-    mem_mb: 128000
+    runtime: 90 #time is in minutes; 2hrs
+    mem_mb: 64000
     # mem_mb_per_cpu: 64000 #16GB
     # mem_mb_per_cpu: 16384 #16GB #low
-    cpus_per_task: 12
+    cpus_per_task: 8
     nodes: 1
 executor: slurm
 
