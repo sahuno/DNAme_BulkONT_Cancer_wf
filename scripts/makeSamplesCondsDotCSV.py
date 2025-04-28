@@ -10,6 +10,9 @@ import yaml
 DIR = "/data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/preprocessed/results/modkit/"
 filenames=glob.glob(os.path.join(DIR, "**","*_modpileup_combined.bed.gz"))
 
+filenames2=glob.glob(os.path.join("/data1/greenbab/projects/triplicates_epigenetics_diyva/DNA/preprocessed/mergedbams_modkit/results/modkit/", "**","*_modpileup_combined.bed.gz"))
+filenames.append(filenames2[0])
+
 samples = {os.path.basename(f).replace("_modpileup_combined.bed.gz", ""): f for f in filenames}
 # samples = {os.path.splitext(os.path.basename(f))[0]: f for f in filenames}# samples{0}
 samples
