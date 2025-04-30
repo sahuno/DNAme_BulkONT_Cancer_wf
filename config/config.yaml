@@ -3,3 +3,15 @@ mm10: /data1/greenbab/database/mm10/mm10.fa
 hg38: /data1/greenbab/database/hg38/v0/Homo_sapiens_assembly38.fasta
 hg38_chrSizes: /data1/greenbab/database/sizes.Homo_sapiens_assembly38
 mm10_chrSizes: /data1/greenbab/database/mm10/mm10.chrom.sizes
+
+
+
+####snpEFF Annotations
+# Directory holding your Singularity images
+imagesDir: "/data1/greenbab/software/images"
+# Local path to the snpEff data directory you want to bind
+snpeffDB: "/data1/greenbab/users/ahunos/apps/workflows/neoantigenDiscovery_wf/data/snpEff_database/data"
+# Which genome build to annotate
+genome: "GRCm38.86"
+# Up/downstream window sizes
+ud: "500,200"
